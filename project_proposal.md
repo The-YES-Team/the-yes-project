@@ -4,7 +4,7 @@ Team Members: Barrett Allen, Maureen Langteau (Team Lead), Kong Le, Skylar Siage
 
 Project Description: Revolutionary tool to log what you are eating and log what you are doing to get or keep in shape.
 
-Sketch:
+Sketch:(will include picture of sketch soon).
 
 APIs - Nutritionix, wger (Workout Manager)
 
@@ -12,6 +12,6 @@ Rough Outline: Barrett and - frontend (Bootstrap, Content)
 
 Input for name/ID (Maureen)
 
-Input for Food (Skyler)
+Input for Food/calorie goal (Skyler - Nutritionix API)
 
-Input for exercises (Kong API - wger)
+Input for exercises (Kong API - wger API)
