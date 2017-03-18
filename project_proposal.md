@@ -8,10 +8,10 @@ Sketch:(will include picture of sketch soon).
 
 APIs - Nutritionix, wger (Workout Manager)
 
-Rough Outline: Barrett and - frontend (Bootstrap, Content)
+Rough Outline: Barrett - frontend (Bootstrap, Content)
 
 Input for name/ID (Maureen)
 
-Input for Food/calorie goal (Skyler - Nutritionix API)
+Input for Food/calorie goal (Skylar - Nutritionix API)
 
-Input for exercises (Kong API - wger API)
+Input for exercises (Kong -  API)
