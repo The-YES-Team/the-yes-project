@@ -1,0 +1,14 @@
+.container {
+	border: black 2px solid;
+	width: 400px;
+	height: 500px;
+}
+
+#foodSearch {
+	margin-top: 100px;
+	margin-left: 120px;
+}
+
+#submit {
+	margin-left: 120px;
+}
