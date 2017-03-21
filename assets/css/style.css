@@ -1,0 +1,26 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+#hero_logo {
+	width: 40%;
+}
+
+#user-div {
+	text-align: center;
+}
+
+#left-side {
+	text-align: center;
+	color: white;
+	background: linear-gradient(#51A7F9, #0365C0)
+}
+
+#right-side {
+	text-align: center;
+	background: linear-gradient(#EF951A, #DE6A10)
+}
+
+#result-div {
+	text-align: center;
+}
