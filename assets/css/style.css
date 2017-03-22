@@ -24,3 +24,7 @@ body {
 #result-div {
 	text-align: center;
 }
+
+.loginItem {
+	display: inline-block;
+}
