@@ -10,7 +10,7 @@ var age=parseInt(document.getElementById("age").value);
 var wtype=document.getElementById("wtype").value;
 var foot=parseInt(document.getElementById("foot").value);
 var inch=parseInt(document.getElementById("inch").value);
-var cm;//=document.getElementById("cen").value;
+var cm =document.getElementById("cen").value;
 var weight=document.getElementById("weight").value;
 if (age!='' && cm!='' && weight!='') {
 if (wtype=="pounds")
@@ -159,9 +159,9 @@ function hcon()
 {
 var hf=parseInt(document.getElementById("foot").value);
 var hi=parseInt(document.getElementById("inch").value);
-//var hc;
-cm=Math.round((hf*30.48)+(hi*2.54));
-//document.getElementById("cen").value=hc;
+var hc;
+hc=Math.round((hf*30.48)+(hi*2.54));
+document.getElementById("cen").value=hc;
 }
 function cknum(event,num)
 {var kc;
@@ -239,7 +239,7 @@ fat2 = fneed / 1000;
 pro2 = pneed / 1000;
 car2 = crneed / 1000;
 alh2 = aneed / 1000;
-fat2 = fat2.toFixed(3);
+fat2=fat2.toFixed(3);
 pro2 = pro2.toFixed(3);
 car2 = car2.toFixed(3);
 alh2 = alh2.toFixed(3);
@@ -257,3 +257,12 @@ else{
 alert("Please fill your details properly!");
 }
 }
+function chk(){
+var sds = document.getElementById('dum');
+if(sds == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");
+document.getElementById("tab").style.visibility="hidden";
+}
+var sdss = document.getElementById("dumdiv");
+if(sdss == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
+}
+window.onload=chk;

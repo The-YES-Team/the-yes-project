@@ -28,3 +28,7 @@ body {
 .loginItem {
 	display: inline-block;
 }
+
+#new-user-form {
+	text-align: center;
+}
