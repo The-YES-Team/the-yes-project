@@ -12,3 +12,8 @@
 #submit {
 	margin-left: 120px;
 }
+
+.foodButton {
+	width: 400px;
+	background: linear-gradient(#EF951A, #DE6A10)
+}
