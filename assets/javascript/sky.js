@@ -1,20 +1,40 @@
-var foods = "cheeseburger";
-var fields = [
-    "item_name",
-    "brand_name",
-    "nf_calories"
-  ];
+    var foods = [];
 
-$(document).on("click", "#submit", displayNutrition);
+    $(document).ready(function($) { // best practice for jQuery
 
-function displayNutrition() { 
-var food = $(this).attr("data-name");
-var queryURL = "https://api.nutritionix.com/v1_1/search/" + food + "?results=0:20&fields=item_name,brand_name,nf_calories&appId=9cc304a2&appKey=8d110eedc0d5864ef8a2264a9bbbde73";
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).done(function(response) {
-    	console.log(response);
-})
-};
+        $("#submit").on("click", function(event) {
+            event.preventDefault();
+
+            var food = $("#user-input").val().trim();
+
+            foods.push(food);
+
+            displayNutrition();
+
+        });
+
+        function displayNutrition() {
+        	var food = $("#user-input").val().trim();
+            var queryURL = "https://api.nutritionix.com/v1_1/search/" + food + "?results=0:50&fields=item_name,brand_name,nf_calories&appId=9cc304a2&appKey=8d110eedc0d5864ef8a2264a9bbbde73";
+
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            }).done(function(response) {
+
+                var results = response.hits
+                $("#nutrition-input").empty();
+
+                var newDiv = $("<div>")
+
+                console.log(response);
+
+                for (var i = 0; i < results.length; i++) {
+                    newDiv.append("<button>" + results[i].fields.item_name + "<br>" + results[i].fields.brand_name + "<br>" + results[i].fields.nf_calories + "</button>");
+                    $("#nutrition-input").append(newDiv);
+                }; // end of for loop
+
+            }); // end of response function
+        }; // end of displayNutrition
+    }); // end of document.ready
