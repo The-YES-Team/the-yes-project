@@ -24,3 +24,11 @@ body {
 #result-div {
 	text-align: center;
 }
+
+.loginItem {
+	display: inline-block;
+}
+
+#new-user-form {
+	text-align: center;
+}
