@@ -1,7 +1,7 @@
 
 .container {
 	border: black 2px solid;
-	width: 400px;
+	width: 700px;
 	height: 500px;
 }
 
@@ -15,6 +15,22 @@
 }
 
 .foodButton {
-	width: 400px;
+	width: 200px;
 	background: linear-gradient(#EF951A, #DE6A10)
+}
+
+#nutrition-input {
+	width: 40%;
+	float: left;
+	margin-top: 10px;
+}
+
+#food-storage {
+	width: 40%;
+	float:right;
+	margin-top: 10px;
+}
+
+.search-section {
+	width: 100%;
 }

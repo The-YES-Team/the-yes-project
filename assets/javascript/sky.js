@@ -1,6 +1,7 @@
     var foods = [];
+    var totalCalories = 0;
 
-    $(document).ready(function($) { // best practice for jQuery
+    $(document).ready(function($) {
 
 
         $("#submit").on("click", function(event) {
@@ -29,6 +30,7 @@
                 console.log(response);
 
                 var newDiv = $("<div>");
+                newDiv.addClass("newDiv");
 
                 for (var i = 0; i < results.length; i++) {
                 	var button = $("<button>");
@@ -46,9 +48,27 @@
                     $("#nutrition-input").append(newDiv);
                 }; // end of for loop
             }); // end of response function
-            $(".foodButton").on("click", function() {
-            	
 
+            var foodDiv = $("<div>");
+            foodDiv.addClass("foodDiv");
+            var addCalories = [];
+
+            $("#nutrition-input").on("click", ".foodButton" ,function() {
+            	$("#nutrition-input").empty();
+
+            	$(this).appendTo("#food-storage");
+            	console.log(this);
+
+            	addCalories.push(this);
+            	console.log(addCalories.length);
+   	
+            	totalCalories += JSON.parse($(this).attr("data-name"));
+
+            	$("#result-div").html(totalCalories);
+            }); // end of on click function
+            $("#food-storage").on("click", ".foodButton", function() {
+            	$(this).remove();
+            	totalCalories -= JSON.parse($(".foodButton").attr("data-name"));
             });
         }; // end of displayNutrition
     }); // end of document.ready
