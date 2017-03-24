@@ -32,6 +32,7 @@
                 var newDiv = $("<div>");
                 newDiv.addClass("newDiv");
 
+
                 for (var i = 0; i < results.length; i++) {
                 	var button = $("<button>");
                 	var itemName = results[i].fields.item_name
@@ -39,8 +40,6 @@
                 	var calorieCount = results[i].fields.nf_calories
 
                 	button.addClass("foodButton");
-                	// button.attr("data-name", itemName);
-                	// button.attr("data-name", brandName);
                 	button.attr("data-name", calorieCount);
                 	button.append(itemName + "<br>" + brandName + "<br>" + calorieCount);
 
@@ -74,3 +73,6 @@
             	$("#result-div").html(totalCalories);
             });
     }); // end of document.ready
+    }; // end of displayNutrition
+    }); // end of document.ready
+

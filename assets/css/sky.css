@@ -13,24 +13,3 @@
 #submit {
 	margin-left: 120px;
 }
-
-.foodButton {
-	width: 200px;
-	background: linear-gradient(#EF951A, #DE6A10)
-}
-
-#nutrition-input {
-	width: 40%;
-	float: left;
-	margin-top: 10px;
-}
-
-#food-storage {
-	width: 40%;
-	float:right;
-	margin-top: 10px;
-}
-
-.search-section {
-	width: 100%;
-}
