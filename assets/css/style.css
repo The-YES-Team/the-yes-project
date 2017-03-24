@@ -57,4 +57,15 @@ select {
 	margin-right: 5px;
 }
 
+#right-side, #left-side {
+	overflow: auto;
+	display: block;
+	height: 423px;
+}
+
+#containment {
+	width: 99%;
+	text-align: center;
+}
+
 
