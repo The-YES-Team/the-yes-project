@@ -5,25 +5,27 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/recipe.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed">
 </head>
 <body>
 <div class="jumbotron text-center">
     <img id="hero_logo" src="assets/images/hero_logo.png" alt="fitifyMe Logo" style="display: none">
 </div>
-<div class="row">
-    <div id="user-div" class="col-sm-12">
-        <br>
-        <h1>Welcome.</h1>
-        <h4>Use <strong>fitifyMe</strong> to help plan the calories you take in and the activity that you burn
-            throughout the day.</h4>
-        <br>
-        <br>
-        <h2>Who are you?</h2>
-        <span id="user-btn-span"></span>
+<div id="containment">
+    <div class="row">
+        <div id="user-div" class="col-sm-12">
+            <br>
+            <h1>Welcome.</h1>
+            <h4>Use <strong>fitifyMe</strong> to help plan the calories you take in and the activity that you burn
+                throughout the day.</h4>
+            <br>
+            <br>
+            <h2>Who are you?</h2>
+            <span id="user-btn-span"></span>
 
-		<span id="existing-user-span" style="display: none">
-			<form name="existingForm" class="form_noborder" >
+            <span id="existing-user-span" style="display: none">
+			<form name="existingForm" class="form_noborder">
 				<table class="table table-bordered">
 					<tr>
 						<td>
@@ -39,9 +41,9 @@
 				</table>
 			</form>
 		</span>
-		<!--CALCULATOR CODE BELOW-->
+            <!--CALCULATOR CODE BELOW-->
 
-		<span id="new-user-form" style="display: none">
+            <span id="new-user-form" style="display: none">
 
 <form name="frm" action="" class='frms_noborders'>
 	<table align="center" class="table table-bordered">
@@ -210,32 +212,41 @@
 				</tr>
 			</table>
             <br>
-            <!--CALCULATOR CODE ABOVE-->
+                <!--CALCULATOR CODE ABOVE-->
 
 		</span>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div id="left-side" class="col-sm-6">
-        <br><br><br><br><br><br><br><br><br>
-        <h2>left-side</h2><br><br><br><br><br><br><br><br><br>
+    <div class="row">
+        <div id="left-side" class="col-sm-6">
+            <br><br><br><br><br><br><br><br><br>
+            <h2>left-side</h2>
+        </div>
+        <div id="right-side" class="col-sm-6">
+            <div class="container foodRecipe">
+                <section class="recipeContainer">
+                    <form class="recipe" method="post" id="recipeSearch">
+                        <input type="search" id="user-inputRecipe" placeholder="Search..." autocomplete="off">
+                    </form>
+                </section>
+                <button id="searchRecipeButt" class="btn btn-default" id="submit" type="submit">Search</button>
+            </div>
+            <div id="recipe-result"></div>
+        </div>
     </div>
-    <div id="right-side" class="col-sm-6">
-        <br><br><br><br><br><br><br><br><br>
-        <h2>right-side</h2><br><br><br><br><br><br><br><br><br>
-    </div>
-</div>
-<div class="row">
-    <div id="result-div" class="col-sm-12">
-        <br><br><br>
-        <h2>result-div</h2><br><br><br>
+    <div class="row">
+        <div id="result-div" class="col-sm-12">
+            <br><br><br>
+            <h2>result-div</h2><br><br><br>
+        </div>
     </div>
 </div>
 
 <script src="assets/javascript/jquery.js"></script>
 <script src="assets/javascript/bootstrap.js"></script>
 <script src="assets/javascript/calculator.js"></script>
-<script src="assets/javascript/login.js"></script>
+<!--<script src="assets/javascript/login.js"></script>-->
 <script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/recipe.js"></script>
 </body>
 </html>

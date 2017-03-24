@@ -1,0 +1,19 @@
+.foodRecipe {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+#user-inputRecipe {
+    margin-bottom: 10px;
+}
+
+#recipe-result {
+    overflow: auto;
+    height: 310px;
+}
+
+.recipeButton {
+    width: 400px;
+    background: linear-gradient(#328DE2, #0466C1)
+}
