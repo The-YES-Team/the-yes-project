@@ -29,11 +29,12 @@ body {
 	display: inline-block;
 }
 
-#new-user-form {
+#new-user-form, #existing-user-span {
 	text-align: center;
+	margin: 5px;
 }
 
-.frms_noborders {
+.frms_noborders, form_noborder {
 	text-align: center;
 }
 
