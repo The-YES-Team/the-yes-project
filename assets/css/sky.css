@@ -1,6 +1,7 @@
+
 .container {
 	border: black 2px solid;
-	width: 400px;
+	width: 700px;
 	height: 500px;
 }
 
@@ -11,9 +12,4 @@
 
 #submit {
 	margin-left: 120px;
-}
-
-.foodButton {
-	width: 400px;
-	background: linear-gradient(#EF951A, #DE6A10)
 }

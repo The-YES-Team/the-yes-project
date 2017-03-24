@@ -1,6 +1,7 @@
     var foods = [];
+    var totalCalories = 0;
 
-    $(document).ready(function($) { // best practice for jQuery
+    $(document).ready(function($) {
 
 
         $("#submit").on("click", function(event) {
@@ -29,6 +30,8 @@
                 console.log(response);
 
                 var newDiv = $("<div>");
+                newDiv.addClass("newDiv");
+
 
                 for (var i = 0; i < results.length; i++) {
                 	var button = $("<button>");
@@ -37,8 +40,6 @@
                 	var calorieCount = results[i].fields.nf_calories
 
                 	button.addClass("foodButton");
-                	button.attr("data-name", itemName);
-                	button.attr("data-name", brandName);
                 	button.attr("data-name", calorieCount);
                 	button.append(itemName + "<br>" + brandName + "<br>" + calorieCount);
 
@@ -46,9 +47,32 @@
                     $("#nutrition-input").append(newDiv);
                 }; // end of for loop
             }); // end of response function
-            $(".foodButton").on("click", function() {
-            	
+            }; // end of displayNutrition
 
+            var foodDiv = $("<div>");
+            foodDiv.addClass("foodDiv");
+            var addCalories = [];
+
+            $("#nutrition-input").on("click", ".foodButton" ,function() {
+            	$("#nutrition-input").empty();
+
+            	$(this).appendTo("#food-storage");
+            	console.log("I am the first this", this);
+
+            	addCalories.push(this);
+            	console.log("hello", this);
+   	
+            	totalCalories += JSON.parse($(this).attr("data-name"));
+            	console.log(this);
+
+            	$("#result-div").html(totalCalories);
+            }); // end of on click function
+            $("#food-storage").on("click", ".foodButton", function() {
+            	totalCalories -= JSON.parse($(this).attr("data-name"));
+            	$(this).remove();
+            	$("#result-div").html(totalCalories);
             });
-        }; // end of displayNutrition
     }); // end of document.ready
+    }; // end of displayNutrition
+    }); // end of document.ready
+
