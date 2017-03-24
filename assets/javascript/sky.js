@@ -39,8 +39,8 @@
                 	var calorieCount = results[i].fields.nf_calories
 
                 	button.addClass("foodButton");
-                	button.attr("data-name", itemName);
-                	button.attr("data-name", brandName);
+                	// button.attr("data-name", itemName);
+                	// button.attr("data-name", brandName);
                 	button.attr("data-name", calorieCount);
                 	button.append(itemName + "<br>" + brandName + "<br>" + calorieCount);
 
@@ -48,6 +48,7 @@
                     $("#nutrition-input").append(newDiv);
                 }; // end of for loop
             }); // end of response function
+            }; // end of displayNutrition
 
             var foodDiv = $("<div>");
             foodDiv.addClass("foodDiv");
@@ -57,18 +58,19 @@
             	$("#nutrition-input").empty();
 
             	$(this).appendTo("#food-storage");
-            	console.log(this);
+            	console.log("I am the first this", this);
 
             	addCalories.push(this);
-            	console.log(addCalories.length);
+            	console.log("hello", this);
    	
             	totalCalories += JSON.parse($(this).attr("data-name"));
+            	console.log(this);
 
             	$("#result-div").html(totalCalories);
             }); // end of on click function
             $("#food-storage").on("click", ".foodButton", function() {
+            	totalCalories -= JSON.parse($(this).attr("data-name"));
             	$(this).remove();
-            	totalCalories -= JSON.parse($(".foodButton").attr("data-name"));
+            	$("#result-div").html(totalCalories);
             });
-        }; // end of displayNutrition
     }); // end of document.ready
