@@ -23,16 +23,23 @@
 		<br>
 		<h2>Who are you?</h2>
 		<span id="user-btn-span"></span>
-		<span id="new-user-form">
+		<span id="new-user-form" style="display: none">
 
 <!--CALCULATOR CODE BELOW-->
 
 <form name="frm" action="" class='frms_noborders'>
 	<table>
 		<tr>
+			<td>
+				Create a Username:
+			</td>
+			<td>
+				<input type="text" name="userName" id="userName">
+			</td>
+		<tr>
 			<td>Age:</td>
 			<td>
-				<input type="text" name="age" id="age" align="left" size="3" maxlength="2" onkeypress="return cknum(event,age)">
+				<input type="text" name="age" id="age" align="left" maxlength="2" onkeypress="return cknum(event,age)">
 			</td>
 			<td>
 			years
@@ -75,11 +82,11 @@
 		</tr>
 		<tr style="display: none">
 			<td>Cms:</td>
-			<td><input type="text" name="cen" id="cen" size="4" onkeyup="con(cen)"></td>
+			<td><input type="text" name="cen" id="cen" onkeyup="con(cen)"></td>
 		</tr>
 		<tr>
 			<td>Weight:</td>
-			<td><input type="text" name="weight" id="weight" maxlength="3" size="3" onkeyup="isNumberKey(this.id)">
+			<td><input type="text" name="weight" id="weight" maxlength="3" onkeyup="isNumberKey(this.id)">
 			</td>
 			<td>
 				<select name="wtype" id="wtype">
@@ -171,6 +178,7 @@
 	<script src="assets/javascript/jquery.js"></script> 
 	<script src="assets/javascript/bootstrap.js"></script>
 	<script src="assets/javascript/calculator.js"></script>
+	<script src="assets/javascript/login.js"></script>
 	<script src="assets/javascript/app.js"></script>
 	</body>
 </html>

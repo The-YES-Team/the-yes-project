@@ -18,7 +18,7 @@ pulsate();
 	$("<span>")
 		.addClass("loginItem")
 		.attr("id", "newUserBtn")
-		.append($("<button>").text("New User"))
+		.append($("<button>").text("I'm New"))
 		.appendTo("#user-btn-span");
 	$("<span>")
 		.addClass("loginItem")
@@ -33,7 +33,7 @@ pulsate();
 // On button clicks
 
 $("#newUserBtn").on("click", function(event) {
-	$("#user-btn-span").html('form');
+	$("#new-user-form").attr("style", "");
 });
 
 

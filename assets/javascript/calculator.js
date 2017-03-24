@@ -142,6 +142,12 @@ document.getElementById("l4").innerHTML="kilogram";
 else{
 alert("Please fill your details properly!");
 }
+// End of CC Function
+
+
+saveInfo();
+
+// End of CC Function
 }
 function con(num)
 {
@@ -266,3 +272,12 @@ var sdss = document.getElementById("dumdiv");
 if(sdss == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
 }
 window.onload=chk;
+
+// Below is code that has been created by group, not used from resources//
+
+function saveInfo() {
+	var userCalorieGoal = $("#rc").val();
+	var userName = $("#userName").val();
+	console.log(userName + userCalorieGoal);
+
+};
