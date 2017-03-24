@@ -33,7 +33,7 @@ pulsate();
 // On button clicks
 
 $("#newUserBtn").on("click", function(event) {
-	$("#user-btn-span").html('form');
+	$("#new-user-form").attr("style", "");
 });
 
 

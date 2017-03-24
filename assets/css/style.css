@@ -32,3 +32,28 @@ body {
 #new-user-form {
 	text-align: center;
 }
+
+.frms_noborders {
+	text-align: center;
+}
+
+.table {
+	width: 80%;
+	margin: 0px auto;
+	max-width: 400px;
+}
+
+input, select {
+	margin-right: 5px;
+}
+
+select {
+	height: 26px;
+}
+
+.loginItem {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
