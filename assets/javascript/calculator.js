@@ -143,7 +143,8 @@ document.getElementById("l4").innerHTML="kilogram";
 }
 }
 else{
-alert("Please fill your details properly!");
+// alert("Please fill your details properly!");
+$("#new-user-form").append('<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Uh oh!</strong> All details must be filled in!</div>');
 }
 
 saveInfo();
