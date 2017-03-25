@@ -61,7 +61,7 @@ function getInfo() {
     var foundIt = false;
 
 // change these *********************************************************
-    userName = $("#userName").val();
+    userName = $("#existingUserName").val();
     console.log("OUTSIDE UserName: " + userName);
 
     // find all names, whose name = userName
@@ -90,10 +90,17 @@ function getInfo() {
 
     if (userName == selUName) {
       userCalorieGoal = selUCalGoal;
-    //  $("#userName").val("");
-    //  will change this when I get the variable from Barrett
-      $("#userName").val(userName+userCalorieGoal);
-      $("#rc").val(userCalorieGoal);
+
+      // $("#existing-user-span").empty();
+      // $("#findUserBtn").empty();
+      // $(".form_noborder").empty();
+         $("#divExist").empty();
+
+      var newCalDiv = $("<div>");
+      newCalDiv.addClass("newCalDiv");
+      newCalDiv.attr("data-calories",userCalorieGoal)
+      newCalDiv.append("Calculated Calorie Goal: " + userCalorieGoal)
+      $("#found-name").append(newCalDiv);
       console.log("Display name and calories goal: " + selUName, selUCalGoal);
       foundIt = true;
 //      return;
