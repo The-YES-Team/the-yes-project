@@ -44,6 +44,11 @@ $(document).ready(function () {
 
     });
 
+    $("#find").on("click", function (event) {
+        event.preventDefault();
+        console.log("clicked find");
+        getInfo();
+    });
 
 // Closing On Document Load Function
 });

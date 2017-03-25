@@ -1,13 +1,79 @@
 body {
-	font-family: 'Roboto', sans-serif;
+    
+    font-family: 'Roboto', sans-serif;
+    background-attachment: fixed;
+    background-image: url('../images/fruit2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#user-div {
+    border: black 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 500px;
+    margin-left: 400px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#foodSearch {
+    margin-top: 10px;
+    margin-left: -550px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#submit-food {
+    margin-left: -550px;
+}
+
+.foodButton {
+    width: 200px;
+    background: linear-gradient(#EF951A , #DE6A10 )
+}
+
+#nutrition-input {
+    width: 30%;
+    float: left;
+    margin-top: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 300px;
+}
+
+#food-storage {
+    width: 30%;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.search-section {
+    width: 100%;
+}
+
+#result-div {
+    height: 100px;
+    border: black 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 500px;
+    margin-left: 400px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 150%;
+    text-align: center;
+    padding: 30px;
+}
+
+.foodInput {
+    overflow-x: hidden;
+}
+
+.newCalDiv {
+	font-size: 150%;
 }
 
 #hero_logo {
 	width: 40%;
-}
-
-#user-div {
-	text-align: center;
 }
 
 #left-side {
@@ -19,10 +85,6 @@ body {
 #right-side {
 	text-align: center;
 	background: linear-gradient(#EF951A, #DE6A10)
-}
-
-#result-div {
-	text-align: center;
 }
 
 .loginItem {
@@ -58,7 +120,6 @@ select {
 }
 
 #right-side, #left-side {
-	overflow: auto;
 	display: block;
 	height: 423px;
 }
@@ -67,5 +128,3 @@ select {
 	width: 99%;
 	text-align: center;
 }
-
-

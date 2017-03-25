@@ -18,12 +18,15 @@ if (wtype=="pounds")
 weight=Math.round(weight/2.2046);
 }
 var loa=document.getElementById("loa").value;
-if(document.getElementById("gen").checked)
+if(document.getElementById("genMale").checked)
+//if(document.getElementsByName("gen").checked)
 {
+//console.log("Male Calc: ");
 fd=(10*weight)+(6.25*cm)-(5*age)+5;
 }
 else
 {
+//console.log("Female Calc: ");
 fd=(10*weight)+(6.25*cm)-(5*age)-161;
 }
 switch(loa)
@@ -142,8 +145,6 @@ document.getElementById("l4").innerHTML="kilogram";
 else{
 alert("Please fill your details properly!");
 }
-// End of CC Function
-
 
 saveInfo();
 
@@ -272,12 +273,3 @@ var sdss = document.getElementById("dumdiv");
 if(sdss == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");}
 }
 window.onload=chk;
-
-// Below is code that has been created by group, not used from resources//
-
-function saveInfo() {
-	var userCalorieGoal = $("#rc").val();
-	var userName = $("#userName").val();
-	console.log(userName + userCalorieGoal);
-
-};

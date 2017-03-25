@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/recipe.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed">
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
 </head>
 <body>
 <div class="jumbotron text-center">
@@ -15,32 +16,34 @@
 <div id="containment">
     <div class="row">
         <div id="user-div" class="col-sm-12">
-            <br>
+            
             <h1>Welcome.</h1>
-            <h4>Use <strong>fitifyMe</strong> to help plan the calories you take in and the activity that you burn
-                throughout the day.</h4>
+            <h4>Use <strong>fitifyMe</strong> to help plan the calories you take in and suggest healthy recipes.</h4>
             <br>
-            <br>
-            <h2>Who are you?</h2>
-            <span id="user-btn-span"></span>
+            <div id="divExist">
+	            <h2>Been Here Before?</h2>
+	            <span id="user-btn-span"></span>
 
-            <span id="existing-user-span" style="display: none">
-			<form name="existingForm" class="form_noborder">
-				<table class="table table-bordered">
-					<tr>
-						<td>
-						Find a Username:
-						<input type="text" name="existingUserName" id="existingUserName">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<button id="find">Find</button>
-						</td>
-					</tr>
-				</table>
-			</form>
-		</span>
+	            <span id="existing-user-span" style="display: none">
+					<form name="existingForm" class="form_noborder">
+						<table class="table table-bordered">
+							<tr>
+								<td>
+								Find a Username:
+								<input type="text" name="existingUserName" id="existingUserName">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<button id="find">Find</button>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</span>
+			</div> 
+			<div id="found-name"> </div>
+			<br>
             <!--CALCULATOR CODE BELOW-->
 
             <span id="new-user-form" style="display: none">
@@ -69,9 +72,9 @@
 				Gender:
 			</td>
 			<td>
-				<input type="radio" name="gen" id="gen genMale" checked>
+				<input value="Male" type="radio" name="gen" id="genMale" checked>
 				Male
-				<input type="radio" name="gen" id="gen genFemale">
+				<input value="Female" type="radio" name="gen" id="genFemale">
 				Female
 			</td>
 		</tr>
@@ -219,8 +222,18 @@
     </div>
     <div class="row">
         <div id="left-side" class="col-sm-6">
-            <br><br><br><br><br><br><br><br><br>
-            <h2>left-side</h2>
+			<div class="container foodInput">
+                <div class="search-section">
+                    <section class="searchContainer">
+                        <form class="search" method="post" id="foodSearch">
+                            <input type="search" id="user-input" placeholder="Search..." autocomplete="off">
+                        </form>
+                    </section>
+                    <button class="btn btn-default" id="submit-food" type="submit">Search</button>
+                </div>
+                <div id="nutrition-input"></div>
+                <div id="food-storage"></div>
+            </div>
         </div>
         <div id="right-side" class="col-sm-6">
             <div class="container foodRecipe">
@@ -234,18 +247,16 @@
             <div id="recipe-result"></div>
         </div>
     </div>
-    <div class="row">
-        <div id="result-div" class="col-sm-12">
-            <br><br><br>
-            <h2>result-div</h2><br><br><br>
-        </div>
+  	<div class="row">
+        <div id="result-div" class="col-sm-12">Calories Counted So Far:</div>
     </div>
 </div>
 
 <script src="assets/javascript/jquery.js"></script>
 <script src="assets/javascript/bootstrap.js"></script>
+<script src="assets/javascript/sky.js"></script>
+<script src="assets/javascript/login.js"></script>
 <script src="assets/javascript/calculator.js"></script>
-<!--<script src="assets/javascript/login.js"></script>-->
 <script src="assets/javascript/app.js"></script>
 <script src="assets/javascript/recipe.js"></script>
 </body>
