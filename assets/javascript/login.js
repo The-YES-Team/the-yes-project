@@ -43,7 +43,7 @@ function saveInfo() {
   console.log(userInfo.calories);
   
   // Alert
-  alert("User Infomation successfully added");
+  // alert("User Infomation successfully added");
 
 //  clears text boxes
  $("#userName").val("");

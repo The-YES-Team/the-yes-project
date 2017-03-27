@@ -4,35 +4,34 @@ body {
     background-attachment: fixed;
     background-image: url('../images/fruit2.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 #user-div {
-    border: black 3px;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 500px;
-    margin-left: 400px;
-    margin-bottom: 40px;
+/*    border: black 3px;
+*/    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
+/*    margin: 0 auto 30px auto;
+*/    padding: 12px;
 }
 
-#foodSearch {
+/*#foodSearch {
     margin-top: 10px;
     margin-left: -550px;
     margin-bottom: 10px;
     color: black;
-}
+}*/
 
-#submit-food {
+/*#submit-food {
     margin-left: -550px;
-}
+}*/
 
-.foodButton {
+/*.foodButton {
     width: 200px;
     background: linear-gradient(#EF951A , #DE6A10 )
-}
+}*/
 
-#nutrition-input {
+/*#nutrition-input {
     width: 30%;
     float: left;
     margin-top: 10px;
@@ -45,32 +44,31 @@ body {
     width: 30%;
     margin-left: 200px;
     margin-top: 10px;
-}
+}*/
 
-.search-section {
+/*.search-section {
     width: 100%;
-}
+}*/
 
 #result-div {
-    height: 100px;
-    border: black 3px;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 500px;
-    margin-left: 400px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    font-size: 150%;
-    text-align: center;
+/*    height: 100px;*/
+/*    border: black 3px;
+*/    background-color: rgba(255, 255, 255, 0.8);
+/*    font-size: 150%;*/
     padding: 30px;
-}
+    text-align: center;
+/*    vertical-align: center;*/
+/*    width: 60%;*/
+/*    margin: 30px auto 30px auto;
+*/}
 
-.foodInput {
+/*.foodInput {
     overflow-x: hidden;
-}
-
+}*/
+/*
 .newCalDiv {
 	font-size: 150%;
-}
+}*/
 
 #hero_logo {
 	width: 40%;
@@ -96,7 +94,7 @@ body {
 	margin: 5px;
 }
 
-.frms_noborders, form_noborder {
+.frms_noborders, .form_noborder {
 	text-align: center;
 }
 
@@ -106,9 +104,9 @@ body {
 	max-width: 400px;
 }
 
-input, select {
+/*input, select {
 	margin-right: 5px;
-}
+}*/
 
 select {
 	height: 26px;
@@ -119,12 +117,11 @@ select {
 	margin-right: 5px;
 }
 
-#right-side, #left-side {
+/*#right-side, #left-side {
 	display: block;
 	height: 423px;
-}
+}*/
 
-#containment {
-	width: 99%;
-	text-align: center;
+.container {
+    width: 100%;
 }
